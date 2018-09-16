@@ -1,0 +1,37 @@
+<fieldset class="formcolor">
+  <fieldset class="innerFieldset">
+    <h1>Welcome to the Game Database</h1>
+    <p>Please select an option below from the drop down menu.</p>
+    <p>
+      If you would like to search, add, delete, or update any of the data
+      please use the buttons below to do so after you have chosen an option from the drop down menu.
+    </p>
+  </fieldset>
+  <form>
+    <fieldset class="innerFieldset">
+      <legend>Select an Option</legend>
+      <br/>
+      <label for="Option1">Choose a type of data to view or manipulate:</label>
+      <select name="Options1" id="options1" onchange="selectChange(this.selectedIndex);">
+        <option label="" value="0">
+        <option label="Basic Level Data" value="1">
+        <option label="Basic Power-up Data" value="2">
+        <option label="Basic Enemy Type Data" value="3">
+        <option label="Advanced Enemy Type Data" value="4">
+        <option label="Basic Item Data" value="5">
+        <option label="Basic Special Ability Data" value="6">
+        <option label="Which Enemy Types are on Which Levels" value="7">
+        <option label="How many of Each Power-up are on a Given Level" value="8">
+        <option label="Count of Special Abilities per Enemy Type" value="9">
+        <option label="Count of Enemy Types that Drop Given Item" value="10">
+        <option label="Number of Stages Given Enemy Type Appears On" value="11">
+        <option label="Average of Given Enemy Type Appearances in Entire Game" value="12">
+        <option label="Special Abilities of Each Enemy Type" value="13">
+      </select>
+      <br/>
+      <input type="submit" name="View" value="View Data" id="viewData" class="grayedOut tallButton" onclick="event.preventDefault();">
+      <input type="submit" name="Search" value="Search Data" id="searchData" class="grayedOut tallButton" onclick="event.preventDefault();">
+      <input type="submit" name="AddData" value="Add/Update/Delete" id="addData" class="grayedOut tallButton" onclick="event.preventDefault();">
+    </fieldset>
+  </form>
+</fieldset>

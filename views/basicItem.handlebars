@@ -1,0 +1,28 @@
+<fieldset class="formcolor">
+  <fieldset class="innerFieldset">
+    <h1>Basic Item Data</h1>
+    <p> Below is a chart of all basic info regarding the types of items in the game.</p>
+  </fieldset>
+  <fieldset class="innerFieldset">
+    <input type="submit" name="Done" value="Done" id="done" class="wideButton tallButton" onclick="doneButton();">
+  </fieldset>
+</fieldset>
+<fieldset class="formcolor">
+  <fieldset class="innerFieldset">
+    <legend>Basic Item Data</legend>
+    <table id="print">
+      <tr>
+       <th>Name of Item Type</th>
+       <th>Description</th>
+       <th>Value</th>
+      </tr>
+      {{#each print}}
+        <tr>
+          <td>{{this.Type}}</td>
+          <td>{{this.Description}}</td>
+          <td>{{this.Value}}</td>
+        </tr>
+      {{/each}}
+    </table>
+  </fieldset>
+</fieldset>

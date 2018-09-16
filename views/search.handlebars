@@ -1,0 +1,21 @@
+<fieldset class="formcolor">
+  <fieldset class="innerFieldset">
+    <h1>{{searchTitle}}</h1>
+    <p>You have chosen to search based on {{search}}.</p>
+    <p>
+      After you have selected a search value from the search criteria use the Search Data button to see results.
+    </p>
+  </fieldset>
+  <form>
+    <fieldset class="innerFieldset">
+      <legend>Select a Search</legend>
+      <br/>
+      <label for="quant">Choose a value:</label>
+      <input type="number" name="quant" id="quant" min="0" placeholder ="0" onchange="numberChange(this.value);">
+      </select>
+      <br/>
+      <input type="submit" name="Search" value="Search Data" id="searchData" class="grayedOut tallButton" onclick="event.preventDefault();">
+    </fieldset>
+  </form>
+</fieldset>
+<input type="hidden" id="pageID" value="{{id}}">

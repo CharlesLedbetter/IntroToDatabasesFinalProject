@@ -1,0 +1,54 @@
+<fieldset class="formcolor">
+  <fieldset class="innerFieldset">
+    <h1>How many of Each Power-up are on a Given Level</h1>
+    <p> Below is a chart showing how many of each Power-up are on a given level in the game.</p>
+    <p> Use the actions on the chart to add, update, or delete.</p>
+  </fieldset>
+  <fieldset class="innerFieldset">
+    <input type="submit" name="Done" value="Done" id="done" class="wideButton tallButton" onclick="doneButton();">
+  </fieldset>
+</fieldset>
+<fieldset class="formcolor">
+  <fieldset class="innerFieldset">
+    <legend>Basic Item Data</legend>
+    <table id="print">
+      <tr>
+      <th>Stage</th>
+      <th>Power-up Type</th>
+      <th>Number on Stage</th>
+      <th>Actions</th>
+      </tr>
+      <tr>
+        <th>
+          <select name="OptionsStage" id="add0">
+            <option label="" value="">
+            {{#each options1}}
+             <option label="{{this.option}}" value="{{this.val}}">
+            {{/each}}
+          </select>
+        </th>
+        <th>
+        <select name="OptionsPowerUps" id="add1">
+          <option label="" value="">
+          {{#each options2}}
+           <option label="{{this.option}}" value="{{this.val}}">
+          {{/each}}
+        </select>
+        </th>
+       <th><input type="text" name="PowerUpAdd" id="add2" class="grayed"></th>
+       <th><input type="submit" name="add" value="Add" id="insertButton" class="wideButton" onclick="insertButton(document.getElementById('pageID').value);"></th>
+      </tr>
+      {{#each print}}
+        <tr>
+          <td>{{this.Stage}}</td>
+          <td>{{this.Type}}</td>
+          <td>{{this.NumberOf}}</td>
+          <td>
+            <input type="submit" name="update" value="Update" class="wideButton" onclick="updateStartButton(this.parentNode.children[1]);"><input type="hidden" name="id" value="{{this.ID}}" id="{{this.ID}}"><input type="submit" name="delete" value="Delete" class="wideButton" onclick="deleteButton(document.getElementById('pageID').value, this.parentNode.children[1]);">
+          </td>
+        </tr>
+      {{/each}}
+    </table>
+  </fieldset>
+</fieldset>
+<input type="hidden" id="pageID" value="8">

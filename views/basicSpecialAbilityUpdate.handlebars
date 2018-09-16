@@ -1,0 +1,40 @@
+<fieldset class="formcolor">
+  <fieldset class="innerFieldset">
+    <h1>Basic Enemy Special Ability Data</h1>
+    <p> Below is a chart of all basic info regarding the special abilities of the enemies in the game.</p>
+    <p> Use the actions on the chart to add, update, or delete.</p>
+  </fieldset>
+  <fieldset class="innerFieldset">
+    <input type="submit" name="Done" value="Done" id="done" class="wideButton tallButton" onclick="doneButton();">
+  </fieldset>
+</fieldset>
+<fieldset class="formcolor">
+  <fieldset class="innerFieldset">
+    <legend>Basic Enemy Special Ability Data</legend>
+    <table id="print">
+      <tr>
+       <th>Name of Special Ability</th>
+       <th>Description</th>
+       <th>Value</th>
+       <th>Actions</th>
+      </tr>
+      <tr>
+       <th><input type="text" name="NameAdd" id="add0" class="grayed"></th>
+       <th><input type="text" name="DescAdd" id="add1" class="grayed"></th>
+       <th><input type="number" name="ValueAdd" id="add2" class="grayed" min = 0></th>
+       <th><input type="submit" name="add" value="Add" id="insertButton" class="wideButton" onclick="insertButton(document.getElementById('pageID').value);"></th>
+      </tr>
+      {{#each print}}
+        <tr>
+          <td>{{this.Type}}</td>
+          <td>{{this.Description}}</td>
+          <td>{{this.Value}}</td>
+          <td>
+            <input type="submit" name="update" value="Update" class="wideButton" onclick="updateStartButton(this.parentNode.children[1]);"><input type="hidden" name="id" value="{{this.ID}}" id="{{this.ID}}"><input type="submit" name="delete" value="Delete" class="wideButton" onclick="deleteButton(document.getElementById('pageID').value, this.parentNode.children[1]);">
+          </td>
+        </tr>
+      {{/each}}
+    </table>
+  </fieldset>
+</fieldset>
+<input type="hidden" id="pageID" value="6">

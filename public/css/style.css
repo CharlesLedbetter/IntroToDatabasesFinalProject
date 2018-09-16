@@ -1,0 +1,128 @@
+/*********************************************************************
+** Final Project (client-side implementation)
+** Author: Charles Ledbetter
+** Date: 11/30/2017
+** Description: The CSS for all of the pages of the Website.
+*********************************************************************/
+
+/*basic element styling*/
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  background: #99C68E;
+  background: -webkit-linear-gradient(#99C68E, #49763E); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#99C68E, #49763E); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#99C68E, #49763E); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#99C68E, #49763E); /* Standard syntax */
+  background-size: cover;
+  min-height: 100vh;
+}
+h1 {
+  margin-top: 0;
+  font-size: 4em;
+}
+p {
+  1em;
+}
+table, th, td {
+  border: 1px solid black;
+}
+table {
+  margin: 2em auto;
+  background: #959fad;
+}
+th, td {
+  background: #f2f4f7;
+}
+td input[type="hidden"] {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*styling for insert form*/
+
+form {
+  margin: auto;
+  text-align: center;
+}
+form .insert {
+  display: block;
+  margin: 10px auto 0 auto;
+}
+form .update {
+  margin: 10px 2px 0 2px;
+}
+label {
+  width:400px;
+  clear:left;
+  text-align:right;
+  padding-right:10px;
+}
+select {
+  margin: 0 auto 1em auto;
+  font-size: 1em;
+}
+
+/*special class styles for forms*/
+
+.radio {
+  margin: 0;
+  padding: 0;
+}
+.formcolor {
+  margin: auto auto 2em auto;
+  width: 80%;
+  background: #D5E0FF;
+  outline: 1px solid #abaeb2;
+  box-shadow: 7px 7px 4px #36404f;
+}
+.innerFieldset {
+  margin: 1em;
+}
+.grayed {
+  background: #f2f4f7;
+  width: 50%;
+}
+.hidden {
+  display: none;
+}
+
+/*button styling*/
+
+.wideButton {
+  margin-left: 2px;
+  margin-right: 2px;
+  width: 200px;
+  font-size: 1em;
+  color: #f2f4f7;
+  background-color: #36404f;
+}
+.wideButton:hover {
+  color: #36404f;
+  background-color: #f2f4f7;
+}
+.tallButton {
+  min-height: 50px;
+}
+.formFixDiv {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  float: left;
+}
+.grayedOut {
+  margin-left: 2px;
+  margin-right: 2px;
+  width: 200px;
+  font-size: 1em;
+  color: #36404f;
+  background-color: darkgray;
+}
+
+/*special style for inline allignment*/
+.sidebyside {
+  display: inline-block;
+}

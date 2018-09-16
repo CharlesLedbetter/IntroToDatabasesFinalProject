@@ -1,0 +1,26 @@
+<fieldset class="formcolor">
+  <fieldset class="innerFieldset">
+    <h1>Basic Power-up Data</h1>
+    <p> Below is a chart of all basic info regarding the Power-ups in the game.</p>
+  </fieldset>
+  <fieldset class="innerFieldset">
+    <input type="submit" name="Done" value="Done" id="done" class="wideButton tallButton" onclick="doneButton();">
+  </fieldset>
+</fieldset>
+<fieldset class="formcolor">
+  <fieldset class="innerFieldset">
+    <legend>Basic Power-up Data</legend>
+    <table id="print">
+      <tr>
+       <th>Name of Power-up</th>
+       <th>Description</th>
+      </tr>
+      {{#each print}}
+        <tr>
+          <td>{{this.Type}}</td>
+          <td>{{this.Description}}</td>
+        </tr>
+      {{/each}}
+    </table>
+  </fieldset>
+</fieldset>

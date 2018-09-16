@@ -1,0 +1,25 @@
+<fieldset class="formcolor">
+  <fieldset class="innerFieldset">
+    <h1>{{searchTitle}}</h1>
+    <p>Please select an option below from the drop down menu.</p>
+    <p>
+      After you have selected a search type press the Search Data button to continue to criteria input.
+    </p>
+  </fieldset>
+  <form>
+    <fieldset class="innerFieldset">
+      <legend>Select a Search</legend>
+      <br/>
+      <label for="Option1">Choose a search type:</label>
+      <select name="Options1" id="options1" onchange="searchChange(this.selectedIndex);">
+        <option label="" value="0">
+        {{#each options}}
+        <option label="{{this.option}}" value="{{this.val}}">
+        {{/each}}
+      </select>
+      <br/>
+      <input type="submit" name="Search" value="Search Data" id="searchData" class="grayedOut tallButton" onclick="event.preventDefault();">
+    </fieldset>
+  </form>
+</fieldset>
+<input type="hidden" id="pageID" value="{{id}}">

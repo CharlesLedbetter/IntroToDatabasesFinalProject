@@ -1,0 +1,51 @@
+<fieldset class="formcolor">
+  <fieldset class="innerFieldset">
+    <h1>Special Abilities of Each Enemy Type</h1>
+    <p> Below is a chart of special abilities of each enemy type that has a special ability.</p>
+    <p> Use the actions on the chart to add, update, or delete.</p>
+  </fieldset>
+  <fieldset class="innerFieldset">
+    <input type="submit" name="Done" value="Done" id="done" class="wideButton tallButton" onclick="doneButton();">
+  </fieldset>
+</fieldset>
+<fieldset class="formcolor">
+  <fieldset class="innerFieldset">
+    <legend>Special Abilities of Each Enemy Type</legend>
+    <table id="print">
+      <tr>
+       <th>Enemy Type</th>
+       <th>Special Ability</th>
+       <th>Actions</th>
+      </tr>
+      <tr>
+        <th>
+          <select name="OptionsEnemy" id="add0">
+            <option label="" value="">
+            {{#each options1}}
+             <option label="{{this.option}}" value="{{this.val}}">
+            {{/each}}
+          </select>
+        </th>
+        <th>
+        <select name="OptionsSpecial" id="add1">
+          <option label="" value="">
+          {{#each options2}}
+           <option label="{{this.option}}" value="{{this.val}}">
+          {{/each}}
+        </select>
+        </th>
+       <th><input type="submit" name="add" value="Add" id="insertButton" class="wideButton" onclick="insertButton(document.getElementById('pageID').value);"></th>
+      </tr>
+      {{#each print}}
+        <tr>
+          <td>{{this.EnemyType}}</td>
+          <td>{{this.SpecialType}}</td>
+          <td>
+            <input type="submit" name="update" value="Update" class="grayedOut" onclick="event.preventDefault();"><input type="hidden" name="id" value="{{this.ID}}" id="{{this.ID}}"><input type="submit" name="delete" value="Delete" class="wideButton" onclick="deleteButton(document.getElementById('pageID').value, this.parentNode.children[1]);">
+          </td>
+        </tr>
+      {{/each}}
+    </table>
+  </fieldset>
+</fieldset>
+<input type="hidden" id="pageID" value="13">
