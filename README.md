@@ -11,7 +11,7 @@ all steps within the Mac or Linux systems section:
    or some other terminal emulator for your Windows system. You
    can find PuTTy at https://www.putty.org.
 
-On All Systems:
+On Mac and Linux Systems:
 
 1) Download and install XAMPP or some other phpMySql manager.
    You can find XAMPP at https://www.apachefriends.org/download.html
